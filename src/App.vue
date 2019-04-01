@@ -17,6 +17,14 @@
       </ul>
       <div class="cover" @touchmove="prevent"></div>
     </aside>
+    <div v-if="circle" class="circle" @click="top()">
+      <i class="iconfont icon-ic_top"></i>
+    </div>
+    <transition :name="transitionName">
+      <keep-alive>
+        <router-view class="app-view" :class="{'app-view-hidden':docked}"></router-view>
+      </keep-alive>
+    </transition>
   </div>
 </template>
 
@@ -40,7 +48,7 @@ export default {
     });
   },
   computed: mapState({
-    cricle: state => state.cricleFlag,
+    circle: state => state.circleFlag,
     flag: state => state.drawer,
     num: state => state.num
   }),

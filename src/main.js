@@ -5,16 +5,24 @@ import App from './App'
 import router from './router/index'
 import VueRouter from 'vue-router'
 import Vuex from 'vuex'
+import swipe from './components/swipe/swiper.vue'
+import backScroll from './components/backScroll'
+import infinite from  './components/infiniteScroll'
 
-Vue.config.productionTip = false
 Vue.use(VueRouter)
 Vue.use(Vuex)
+Vue.component(swipe.name, swipe)
+Vue.component(backScroll.name, backScroll)
+Vue.component(infinite.name, infinite)
 /* eslint-disable no-new */
 const store = new Vuex.Store({
   state: {
     num: 1,
     drawer: false,
-    circleFlag: false
+    circleFlag: false,
+    theme: {},
+    article: {},
+    before: ''
   },
   mutations: {
     add: ( state, n ) => state.num = n,
