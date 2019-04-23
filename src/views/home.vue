@@ -144,7 +144,7 @@ div {
   left: 0;
   width: 100%;
   height: 100%;
-  opacity: 0.4;
+  opacity: 0.2;
   position: absolute;
   background-color: @blue;
 }
@@ -171,7 +171,7 @@ h3 {
    right: 0;
    display: block;
    position: absolute;
-   border: 2px solid @yellow;
+   border: 2px solid #007aff;
  }
 }
 }
@@ -191,7 +191,7 @@ h3 {
    letter-spacing: 0.1rem;
    border-radius: 0.4rem;
    text-align: center;
-   background-color: @yellow;
+   background-color: #007aff;
    transform: translate(0,-50%);
    position: absolute;
    box-shadow: 0 3px 10px 0 rgba(91,115,146,0.15);
@@ -210,8 +210,8 @@ img {
   margin-right: 0.4rem;
 }
 p {
-  color: @blue;
-  font-size: 0.4rem;
+  color: #111111;
+  font-size: 0.38rem;
   text-align: justify;
   margin: 0;
 }
